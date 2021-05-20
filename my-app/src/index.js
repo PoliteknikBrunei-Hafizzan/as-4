@@ -5,7 +5,7 @@ import VueApollo from "vue-apollo";
 
 const apolloProvider = new VueApollo({
   defaultClient: new ApolloClient({
-    uri: '/server'
+    uri: '/localhost'
   })
 });
 
@@ -14,6 +14,6 @@ Vue.use(VueApollo);
 
 new Vue({
   el: '#app',
-  apolloProvider, 
+  apolloProvider,
   render: h => h(App)
 })
