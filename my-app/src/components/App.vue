@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <p class="username">{{ currentUser.username }}'s posts:</p>
-    <ul>
-      <li v-for="post in posts" :key="post.id">{{ post.content }}</li>
-    </ul>
     <div>
       <input v-model="newPostContent" />
       <button @click="addPost()">Add Post</button>
@@ -32,7 +28,7 @@
             </tr>
           </thead>
           <tbody class="bg-white divide-y divide-gray-200">
-            <tr>
+            <tr v-for="post in posts" :key="post.id">
               <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
                   <div class="flex-shrink-0 h-10 w-10">
@@ -46,15 +42,15 @@
                 </div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
-                <div class="text-sm text-gray-900">Regional Paradigm Technician</div>
+                <div class="text-sm text-gray-900">{{ post.content }}</div>
               </td>
               <td class="px-6 py-4 whitespace-nowrap">
                 <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-                  Active
+                  {{  post.userId }}
                 </span>
               </td>
               <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                Admin
+                {{ post.id }}
               </td>
             </tr>
 
