@@ -1,4 +1,4 @@
-# Logbook evidence of VPS Deployment
+# Logbook evidence of Web Application Server
 
 - [Generate Public Key using ed25519 encryption](#generate-public-key-using-ed25519-encryption)
 - [Creating a new droplet](#creating-a-new-droplet)
